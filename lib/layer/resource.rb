@@ -67,7 +67,7 @@ module Layer
           query = params.collect{ |key, value| "#{key}=#{value}" }.join("&")
           url = "#{url}?#{query}"
         end
-        
+
         collection = client.get(url)
 
         if collection.any?
