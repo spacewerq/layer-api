@@ -21,6 +21,10 @@ module Layer
         Layer::ResourceProxy.new(client, nil, Layer::Resources::User)
       end
 
+      def notifications
+        Layer::ResourceProxy.new(client, nil, Layer::Resources::Notification)
+      end
+
       def generate_identity_token(options = {})
         Layer::IdentityToken.new(options)
       end
